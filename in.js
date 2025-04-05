@@ -56,7 +56,7 @@ async function get(folder) {
     currentsong.pause();
     currentsong.currentTime = 0;
 
-    let res = await fetch(`/${folder}/`);
+        let res = await fetch(`${folder}/songs.json`);
     let html = await res.text();
     let div = document.createElement("div");
     div.innerHTML = html;
